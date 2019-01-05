@@ -2,6 +2,13 @@
     "name": "TestProject",
     "version": "1.0.0",
     "dependencies": {
-        "express": "~4.16.4"
+        "express": "~4.16.4",
+        "morgan": "~1.9.1",
+        "compression": "~1.7.3",
+        "body-parser": "~1.18.3",
+        "jade": "~1.11.0",
+        "node-sass-middleware": "~0.11.0",
+        "express-validator": "~5.3.1",
+        "cookie-session": "~2.0.0-beta.3"
     }
 }

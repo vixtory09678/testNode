@@ -1,0 +1,26 @@
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/main.css")
+    body
+        h1= title
+
+        if isLoggedIn
+            h3 You are logged in.
+            form(action="logout", name="logout", method="POST")
+                div
+                    input(type="submit", value="Logout")
+
+        else
+            form(action="login", method="POST", name="login")
+                div
+                    label(for="email") Email 
+                    input(type="email", name="email", placeholder="your_email@email.com")
+                div
+                    label(for="password") Password 
+                    input(type="password", name="password", placeholder="password")
+                div
+                    input(type="checkbox", name="remember", value="remember")
+                    | Remember Me
+                div
+                    input(type="submit", value="Login")

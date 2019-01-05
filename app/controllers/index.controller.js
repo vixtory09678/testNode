@@ -1,3 +1,13 @@
 exports.render = function (req , res) {
-    res.send('Hello world');
-}
+    var isLoggedIn = false;
+
+    if (typeof req.session.remember !== 'undefined'){
+        isLoggedIn = req.session.remember;
+    }
+    
+
+    res.render('index',{
+        'title': 'Hello world',
+        isLoggedIn: isLoggedIn
+    });
+};
